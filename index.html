@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helios Equipment Services - Sales Inquiry</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 font-sans antialiased text-slate-800 min-h-screen flex flex-col justify-between">
+
+  <!-- Navigation Bar -->
+  <header class="bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 bg-amber-500 rounded-md flex items-center justify-center font-extrabold text-slate-900 text-lg">H</div>
+        <span class="font-bold text-xl tracking-wide">Helios <span class="text-amber-500">Equipment Services</span></span>
+      </div>
+      <span class="text-xs uppercase tracking-wider font-semibold bg-slate-800 text-slate-300 py-1 px-3 rounded-full border border-slate-700">Sales Portal</span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto my-10 px-4 w-full">
+    <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <!-- Header Banner -->
+      <div class="bg-slate-900 px-8 py-6 text-white border-b border-slate-800">
+        <h1 class="text-2xl font-bold tracking-tight">Request an Equipment Quote</h1>
+        <p class="text-slate-400 text-sm mt-1">Submit an enquiry to connect with our industrial refrigeration & cooling solution sales specialists.</p>
+      </div>
+
+      <!-- Web-to-Lead Form -->
+      <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dbm000014qZ6v" method="POST" class="p-8 space-y-6">
+
+        <!-- Hidden Web-to-Lead Control Fields -->
+        <input type="hidden" name="oid" value="00Dbm000014qZ6v" />
+        <input type="hidden" name="retURL" value="https://www.google.com/" />
+        <input type="hidden" name="lead_source" value="Web" />
+
+        <!-- Debugging Options (Uncomment if testing in debug mode) -->
+        <!-- 
+        <input type="hidden" name="debug" value="1" />
+        <input type="hidden" name="debugEmail" value="raisulkayesofficial@gmail.com" /> 
+        -->
+
+        <!-- Contact Information Section -->
+        <div class="border-b border-slate-100 pb-6 space-y-4">
+          <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500">1. Contact Information</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="first_name" class="block text-xs font-semibold uppercase text-slate-600 mb-1">First Name</label>
+              <input id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="e.g. Jane"
+                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-slate-800 text-sm transition" />
+            </div>
+
+            <div>
+              <label for="last_name" class="block text-xs font-semibold uppercase text-slate-600 mb-1">Last Name <span class="text-red-500">*</span></label>
+              <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required placeholder="e.g. Doe"
+                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-slate-800 text-sm transition" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="email" class="block text-xs font-semibold uppercase text-slate-600 mb-1">Email <span class="text-red-500">*</span></label>
+              <input id="email" maxlength="80" name="email" size="20" type="text" required placeholder="e.g. jane.doe@company.com"
+                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-slate-800 text-sm transition" />
+            </div>
+
+            <div>
+              <label for="phone" class="block text-xs font-semibold uppercase text-slate-600 mb-1">Phone</label>
+              <input id="phone" maxlength="40" name="phone" size="20" type="text" placeholder="+31 20 123 4567"
+                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-slate-800 text-sm transition" />
+            </div>
+          </div>
+
+          <div>
+            <label for="company" class="block text-xs font-semibold uppercase text-slate-600 mb-1">Company <span class="text-red-500">*</span></label>
+            <input id="company" maxlength="40" name="company" size="20" type="text" required placeholder="e.g. Nordic Cold Store"
+              class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-slate-800 text-sm transition" />
+          </div>
+        </div>
+
+        <!-- Equipment & Site Details Section -->
+        <div class="border-b border-slate-100 pb-6 space-y-4">
+          <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500">2. Interest & Location Details</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Equipment Type Custom Field -->
+            <div>
+              <label for="00Nbm00003lsDmr" class="block text-xs font-semibold uppercase text-slate-600 mb-1">Equipment Type</label>
+              <select id="00Nbm00003lsDmr" name="00Nbm00003lsDmr" title="Equipment Type"
+                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-slate-800 text-sm transition bg-white">
+                <option value="">--None--</option>
+                <option value="Chiller">Chiller</option>
+                <option value="Cooling Tower">Cooling Tower</option>
+                <option value="Compressor">Compressor</option>
+                <option value="Air Dryer">Air Dryer</option>
+              </select>
+            </div>
+
+            <!-- Site Postcode Custom Field -->
+            <div>
+              <label for="00Nbm00003lsEFt" class="block text-xs font-semibold uppercase text-slate-600 mb-1">Site Postcode</label>
+              <input id="00Nbm00003lsEFt" maxlength="20" name="00Nbm00003lsEFt" size="20" type="text" placeholder="e.g. 3011 BN"
+                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-slate-800 text-sm transition" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Enquiry Description Section -->
+        <div class="space-y-4">
+          <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500">3. Project & Enquiry Details</h2>
+
+          <div>
+            <label for="description" class="block text-xs font-semibold uppercase text-slate-600 mb-1">Description</label>
+            <textarea id="description" name="description" rows="4" placeholder="Provide details regarding your cooling, compression, or equipment enquiry..."
+              class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-slate-800 text-sm transition resize-y"></textarea>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="pt-4 flex justify-end">
+          <button type="submit" name="submit"
+            class="w-full sm:w-auto px-6 py-3 bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold rounded-lg transition cursor-pointer flex items-center justify-center space-x-2">
+            <span>Send Enquiry</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 border-t border-slate-800 text-slate-400 py-6 text-center text-xs">
+    <div class="max-w-4xl mx-auto px-4">
+      <p>&copy; 2026 Helios Equipment Services. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

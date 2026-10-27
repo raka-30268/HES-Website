@@ -34,7 +34,12 @@ background:radial-gradient(closest-side,var(--ink) 0 74%,transparent 75%),conic-
 /* Forms */
 .forms{padding-block:clamp(2.5rem,6vw,4.5rem)}
 .forms .wrap{display:grid;gap:2.5rem}
-.forms .panel{max-width:720px}
+@media (min-width:1000px){
+.forms .panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.2fr);grid-template-rows:auto 1fr;column-gap:2.5rem}
+.forms .panel h2,.forms .panel>p{grid-column:1}
+.forms .panel>p{align-self:start;margin-bottom:0}
+.forms .panel form{grid-column:2;grid-row:1/span 2}
+}
 .panel{padding:clamp(1.25rem,3vw,2.25rem);border-top:6px solid var(--sun);background:#fff}
 .panel.service{border-top-color:var(--cool)}
 .panel h2{font-size:1.6rem}

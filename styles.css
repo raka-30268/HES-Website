@@ -1,7 +1,8 @@
 :root{--ink:#0F2B3D;--frost:#EAF2F6;--cool:#1F7A9C;--sun:#F5A524;--muted:#4A6272;--edge:#6B8696}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:1rem}
-body{margin:0;font:400 1rem/1.6 Archivo,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--frost)}
+body{margin:0;font:400 1rem/1.6 Archivo,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--frost);display:flex;flex-direction:column;min-height:100vh;min-height:100dvh}
+main{flex:1}
 :focus-visible{outline:3px solid var(--sun);outline-offset:3px}
 .wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
 h1,h2{margin:0;font-stretch:125%;font-weight:800;line-height:1.1}
@@ -32,7 +33,8 @@ background:radial-gradient(closest-side,var(--ink) 0 74%,transparent 75%),conic-
 
 /* Forms */
 .forms{padding-block:clamp(2.5rem,6vw,4.5rem)}
-.forms .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:2rem;align-items:start}
+.forms .wrap{display:grid;gap:2.5rem}
+.forms .panel{max-width:720px}
 .panel{padding:clamp(1.25rem,3vw,2.25rem);border-top:6px solid var(--sun);background:#fff}
 .panel.service{border-top-color:var(--cool)}
 .panel h2{font-size:1.6rem}
@@ -47,8 +49,9 @@ form .btn{width:100%;margin:0}
 .service .btn{background:var(--cool);border-color:var(--cool);color:#fff}
 
 /* Thank-you page */
-.thanks{padding-block:clamp(2.5rem,8vw,6rem)}
-.thanks .panel{max-width:640px}
+.thanks{display:flex;align-items:center;padding-block:clamp(2.5rem,8vw,6rem)}
+.thanks .panel{max-width:640px;margin-inline:auto;text-align:center}
+.thanks .panel>p{margin-inline:auto}
 .thanks h1{margin-bottom:.4rem;font-size:clamp(1.8rem,4vw,2.5rem)}
 
 footer{padding-block:1.5rem;color:#CFE0E9;font-size:.9rem}
